@@ -20,6 +20,11 @@ namespace Equalop.Controllers
             return View();
         }
 
+        public ActionResult OurOrganization()
+        {
+            return View();
+        }
+
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
