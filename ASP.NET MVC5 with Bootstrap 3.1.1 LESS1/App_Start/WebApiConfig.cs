@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
 
-namespace ASP.NET_MVC5_with_Bootstrap_3._1._1_LESS1
+namespace Equalop
 {
     public static class WebApiConfig
     {

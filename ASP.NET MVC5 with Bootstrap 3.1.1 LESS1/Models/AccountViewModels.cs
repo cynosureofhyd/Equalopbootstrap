@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace ASP.NET_MVC5_with_Bootstrap_3._1._1_LESS1.Models
+namespace Equalop.Models
 {
     public class ExternalLoginConfirmationViewModel
     {

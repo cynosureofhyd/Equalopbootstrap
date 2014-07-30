@@ -3,7 +3,7 @@ using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
 using Owin;
 
-namespace ASP.NET_MVC5_with_Bootstrap_3._1._1_LESS1
+namespace Equalop
 {
     public partial class Startup
     {

@@ -8,9 +8,9 @@ using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Owin.Security;
-using ASP.NET_MVC5_with_Bootstrap_3._1._1_LESS1.Models;
+using Equalop.Models;
 
-namespace ASP.NET_MVC5_with_Bootstrap_3._1._1_LESS1.Controllers
+namespace Equalop.Controllers
 {
     [Authorize]
     public class AccountController : Controller

@@ -7,7 +7,7 @@ using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 
-namespace ASP.NET_MVC5_with_Bootstrap_3._1._1_LESS1
+namespace Equalop
 {
     public class MvcApplication : System.Web.HttpApplication
     {
