@@ -6,12 +6,18 @@
     <title>@ViewBag.Title - Equalop.org</title>
     @Styles.Render("~/bundles/css")
     @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
     
-    <style type="text/css">
-        .dropdown:hover .dropdown-menu {
-            display: block;
-        }
-    </style>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('ul.nav li.dropdown').hover(function () {
+                $(this).find('.dropdown-menu').stop(true, true).delay(100).fadeIn(200);
+            }, function () {
+                $(this).find('.dropdown-menu').stop(true, true).delay(100).fadeOut(200);
+            });
+        });
+        
+    </script>
 
 </head>
 <body>
@@ -27,32 +33,56 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Students", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("Get Involved", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("Testimonials", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
-
-                <ul class="dropdown-menu" id="menu1">
-                    <li>
-                        <a href="#">2-level Menu <i class="icon-arrow-right"></i></a>
-                        <ul class="dropdown-menu sub-menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Another action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li class="divider"></li>
-                            <li class="nav-header">Nav header</li>
-                            <li><a href="#">Separated link</a></li>
-                            <li><a href="#">One more separated link</a></li>
+                    <li><a href="#">Home</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">About <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <!--  1st Top Nav links -->
+                            <li><a href="#">Our Organization</a></li>
+                            <li><a href="#">Our Team</a></li>                         
                         </ul>
                     </li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#">Separated link</a></li>
-                </ul>
+
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Students <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <!--  1st Top Nav links -->
+                            <li><a href="#">Online Resources</a></li>
+                            <li><a href="#">Register For Classes</a></li>                           
+                            <li><a href="#">Class Schedule</a></li> 
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Contact <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <!--  1st Top Nav links -->
+                            <li><a href="#">Step Up To Teach</a></li>
+                            <li><a href="#">Volunteer</a></li>                         
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Get Involved <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <!--  1st Top Nav links -->
+                            <li><a href="#">Step Up To Teach</a></li>
+                            <li><a href="#">Volunteer</a></li>                           
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Testimonials <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <!--  1st Top Nav links -->
+                            <li><a href="#">Our Organization</a></li>
+                            <li><a href="#">Our Team</a></li>                           
+                        </ul>
+                    </li>
+
+
+                    <li><a href="#">Contact</a></li>
+                </ul>                           
                 @Html.Partial("_LoginPartial")
             </div>
         </div>
